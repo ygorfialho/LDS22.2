@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<header style="background-color: #FFC000;">
+    <div class="row align-items-center" id="banner">
+        <div class="col d-flex justify-content-center">
+            <img src="{% static 'img/banner.png' %}" class="img-center" alt="Banner">
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container" style="padding-top: 50px;">
+        <div class="text-center">
+            <h2 style="color: #EEC000;">SMARTPHONE</h2>
+            <br>
+        </div>
+            <h4>
+                Os smartphones são dispositivos eletrônicos portáteis que se tornaram essenciais na vida moderna.
+                Eles permitem que as pessoas se comuniquem, acessem a Internet, tirem fotos, ouçam música, assistam a vídeos e realizem uma variedade de outras tarefas.
+                Atualmente, há uma grande variedade de smartphones disponíveis no mercado, com diferentes tamanhos, recursos e preços.
+                Algumas marcas conhecidas incluem Apple, Samsung, Xiaomi, Motorola, entre outras.
+                Os preços dos smartphones podem variar significativamente, dependendo das especificações técnicas e da marca.
+            </h4>
+        <div class="text-center" style="color: #EEC000; padding-top: 50px;">
+            <h2>RAM</h2>
+            <br>
+        </div>
+        <h5>
+            Abaixo está uma tabela de <b>alguns</b> dos modelos com 12GB de RAM.
+        </h5>
+        <br>
+        {% autoescape off %}
+        {{dados}}
+        {% endautoescape off %}
+        <div class="text-center" style="color: #EEC000; padding-top: 50px;">
+            <h2>XIAOMI</h2>
+            <br>
+        </div>
+        <h5>
+            Abaixo está uma tabela de <b>todos</b> os modelos da Xiaomi presentes no dataset.
+        </h5>
+        <br>
+        {% autoescape off %}
+        {{dados2}}
+        {% endautoescape off %}
+    </div>
+</section>
+{% endblock %}
